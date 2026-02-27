@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التمرينات حول</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* ===== Navbar ===== */
+nav{
+    background:#1e3a5f;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ffd166;
+}
+
+/* ===== Page Title ===== */
+.header{
+    text-align:center;
+    padding:40px 20px;
+    background:white;
+}
+
+.header h1{
+    color:#1e3a5f;
+}
+
+/* ===== Search Box ===== */
+.search-box{
+    text-align:center;
+    margin:20px;
+}
+
+.search-box input{
+    width:60%;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+/* ===== Lectures Grid ===== */
+.lectures{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#1e3a5f;
+}
+
+.card p{
+    font-size:14px;
+    color:#555;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#ffd166;
+    text-decoration:none;
+    color:black;
+    border-radius:5px;
+}
+
+.card a:hover{
+    background:#ffb703;
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#16283d;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>قسم 1 علوم 2</h2>
+    <div>
+        <a href="index.html">الرئيسية</a>
+        <a href="b.html">الجدول الدراسي</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<section class="header">
+    <h1>📚 التمرينات حول</h1>
+    <p>يمكنك تحميل جميع التمرينات الخاصة بالمواد من هنا</p>
+</section>
+
+<!-- Search -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث عن مادة..." onkeyup="searchLectures()">
+</div>
+
+<!-- Lectures -->
+<section class="lectures" id="lecturesList">
+
+    <div class="card">
+        <h3>عربية</h3>
+        <p>لغة الضاد وقواعدها وبلاغتها</p>
+        <a href="https://www.dzexams.com/ar/1as/arabe">exam dz موقع</a>
+    </div>
+
+    <div class="card">
+        <h3>رياضيات</h3>
+        <p>علم الأرقام والمعادلات والمنطق الدقيق</p>
+        <a href="https://www.dzexams.com/ar/1as/mathematiques">exam dz موقع</a>
+    </div>
+
+    <div class="card">
+        <h3>فرنسية</h3>
+        <p>لغة عالمية للثقافة والتواصل الدولي</p>
+        <a href="https://www.dzexams.com/ar/1as/francais">exam dz موقع</a>
+    </div>
+
+    <div class="card">
+        <h3>علوم طبيعة</h3>
+        <p>دراسة الظواهر الطبيعية بالتجربة والملاحظة</p>
+        <a href="https://www.dzexams.com/ar/1as/sciences-naturelles">exam dz موقع</a>
+    </div>
+        <div class="card">
+        <h3>فيزياء</h3>
+        <p>علم الطاقة والحركة والقوانين الطبيعية</p>
+        <a href="https://www.dzexams.com/ar/1as/physique">exam dz موقع</a>
+    </div>
+        <div class="card">
+        <h3>انجليزية</h3>
+        <p>لغة عالمية للتواصل والمعرفة الحديثة</p>
+        <a href="https://www.dzexams.com/ar/1as/anglais">exam dz موقع</a>
+    </div>
+        <div class="card">
+        <h3>تكنولجيا</h3>
+        <p>تطبيق العلم لتطوير الأدوات الحديثة</p>
+        <a href="https://www.dzexams.com/ar/1as/technologie-st">exam dz موقع</a>
+    </div>
+      </div>
+        <div class="card">
+        <h3>الاسلامية</h3>
+        <p>تعاليم دينية تهذب السلوك والأخلاق</p>
+        <a href="https://www.dzexams.com/ar/1as/tarbia-islamia">exam dz موقع</a>
+    </div>
+      </div>
+        <div class="card">
+        <h3>اجتماعيات</h3>
+        <p>دراسة أحداث الماضي وتطور الحضارات</p>
+        <a href="https://www.dzexams.com/ar/1as/histoire-geographie">exam dz موقع</a>
+    </div>
+          </div>
+        <div class="card">
+        <h3>الإعلام الآلي</h3>
+        <p>علم الحاسوب والبرمجة ومعالجة البيانات</p>
+        <a href="https://www.dzexams.com/ar/1as/informatique">exam dz موقع</a>
+    </div>
+
+</section>
+
+<footer>
+جميع الحقوق محفوظة © التلميذ عماد الدين طويل
+</footer>
+
+<script>
+function searchLectures() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        if (title.includes(input)) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

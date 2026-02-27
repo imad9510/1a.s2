@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الجدول الدراسي -قسم 1 علوم 2</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* ===== Navbar ===== */
+nav{
+    background:#1e3a5f;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ffd166;
+}
+
+/* ===== Header ===== */
+.header{
+    text-align:center;
+    padding:40px 20px;
+    background:white;
+}
+
+.header h1{
+    color:#1e3a5f;
+}
+
+/* ===== Table ===== */
+.table-container{
+    padding:40px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th, td{
+    padding:15px;
+    text-align:center;
+}
+
+th{
+    background:#1e3a5f;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+tr:hover{
+    background:#e3f2fd;
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#16283d;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>قسم 1 علوم 2 </h2>
+    <div>
+        <a href="index.html">الرئيسية</a>
+        <a href="a.html">التمرينات حول</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<section class="header">
+    <h1>📅 الجدول الدراسي</h1>
+</section>
+
+<!-- Table -->
+<div class="table-container">
+<table>
+    <tr>
+        <th>اليوم</th>
+        <th>8:00 - 9:00</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:00 - 12:00</th>
+        <th>13:30 - 14:30</th>
+        <th>14:30 - 15:30</th>
+        <th>15:30 - 16:30</th>
+    </tr>
+
+    <tr>
+        <td>الأحد</td>
+        <td>اسلامية</td>
+        <td>انجليزية</td>
+        <td>رياضيات</td>
+        <td></td>
+        <td>فيزياء</td>
+        <td>علوم</td>
+        <td>عربية</td>
+    </tr>
+
+    <tr>
+        <td>الاثنين</td>
+        <td>فيزياء</td>
+        <td></td>
+        <td>علوم</td>
+        <td></td>
+        <td>الإعلام الآلي</td>
+        <td>فرنسية</td>
+        <td>بدنية</td>
+    </tr>
+
+    <tr>
+        <td>الثلاثاء</td>
+        <td>انجليزية</td>
+        <td>فرنسية</td>
+        <td>رياضيات</td>
+        <td></td>
+          <td>عربية</td>
+    </tr>
+
+    <tr>
+        <td>الأربعاء</td>
+        <td>تكنولجيا</td>
+        <td>الإعلام الآلي</td>
+        <td>تاريخ وجغرافيا</td>
+        <td>رياضيات</td>
+          <td>فرنسية</td>
+        <td>عربية</td>
+        <td>انجليزية</td>
+    </tr>
+
+    <tr>
+        <td>الخميس</td>
+        <td>موسيقى</td>
+        <td>فيزياء</td>
+        <td>عربية</td>
+        <td>علوم</td>
+        <td>تكنولجيا</td>
+        <td>رياضيات</td>
+        <td>تاريخ وجغرافيا</td>
+    </tr>
+</table>
+</div>
+
+<footer>
+جميع الحقوق محفوظة © التلميذ عماد الدين طويل
+</footer>
+
+</body>
+</html>

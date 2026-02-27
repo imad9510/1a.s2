@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حساب المعدل</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* ===== Navbar ===== */
+nav{
+    background:#1e3a5f;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ffd166;
+}
+
+/* ===== Header ===== */
+.header{
+    text-align:center;
+    padding:40px 20px;
+    background:white;
+}
+
+.header h1{
+    color:#1e3a5f;
+}
+
+/* ===== News Section ===== */
+.news-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+.news-card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+}
+
+.news-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.news-card .content{
+    padding:15px;
+}
+
+.news-card h3{
+    color:#1e3a5f;
+}
+
+.news-card p{
+    font-size:14px;
+    color:#555;
+}
+
+.news-card button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    background:#ffd166;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.news-card button:hover{
+    background:#ffb703;
+}
+
+/* ===== Modal ===== */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    padding:20px;
+    width:80%;
+    max-width:500px;
+    border-radius:10px;
+}
+.ima { display:inline-block;
+}
+
+.close{
+    float:left;
+    cursor:pointer;
+    font-size:20px;
+    color:red;
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#16283d;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>قسم 1 علوم 2 </h2>
+    <div>
+        <a href="index.html">الرئيسية</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<section class="header">
+    <h1>📰 حساب المعدل</h1>
+    <p>حساب المعدل  الفصلي و افضل قنوات اليوتيوب</p>
+</section>
+
+<!-- News Cards -->
+<section class="news-container">
+    <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="">
+        <div class="content">
+            <h3>المعدل الفصلي</h3>
+            <p>يُحسب المعدل الفصلي بضرب علامة كل مادة في معاملها (ساعاتها المعتمدة)، ثم جمع النواتج وقسمتها على مجموع المعاملات (الساعات المعتمدة).</p>
+            <button class="ima"><a href="https://eddirasa.com/ens-sec/1as/average/average-1as-st/"> موقع الدراسة الجزائري</a> </button>
+        </div>
+    </div>
+    <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" alt="">
+        <div class="content">
+            <h3>افضل قنوات يوتيوب</h3>
+            <p>اكتشف محتوى تعليميًا غنيًا عبر مقاطع فيديو تفاعلية تغطي مختلف مواضيع السنة الأولى ثانوي، مع شروحات مبسطة تعزّز الفهم وتدعم التفوق الدراسي.</p>
+            <button ><a href="https://www.dzexams.com/ar/1as/youtube">موقع exam dz</a></button>
+        </div>
+    </div>
+
+</section>
+
+<!-- Modal -->
+<div class="modal" id="newsModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✖</span>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<footer>
+جميع الحقوق محفوظة © التلميذ عماد الدين طويل
+</footer>
+
+<script>
+function openModal(text){
+    document.getElementById("modalText").innerText = text;
+    document.getElementById("newsModal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("newsModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
