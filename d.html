@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مواعيد الفروض والاختبارات</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* ===== Navbar ===== */
+nav{
+    background:#1e3a5f;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ffd166;
+}
+
+/* ===== Header ===== */
+.header{
+    text-align:center;
+    padding:40px;
+    background:white;
+}
+
+.header h1{
+    color:#1e3a5f;
+}
+
+/* ===== Section Style ===== */
+.section{
+    margin:30px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+.section h2{
+    color:#1e3a5f;
+}
+
+/* ===== Table ===== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th, td{
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#1e3a5f;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+.exam{
+    background:#ffe0e0 !important;
+}
+
+.free{
+    background:#e0ffe5 !important;
+}
+
+/* ===== Alert Box ===== */
+.alert{
+    background:#ffd166;
+    padding:15px;
+    margin:20px;
+    border-radius:8px;
+    text-align:center;
+    display:none;
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#16283d;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>قسم 1 علوم 2</h2>
+    <div>
+        <a href="index.html">الرئيسية</a>
+        <a href="b.html">الجدول الدراسي</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<section class="header">
+    <h1>📅 مواعيد الفروض والاختبارات</h1>
+    <p>تنظيم مواعيد التقييمات والساعات الحرة</p>
+</section>
+
+<div class="alert" id="examAlert">
+    ⚠ يوجد اختبار قريب! تأكد من الاستعداد جيدًا.
+</div>
+
+<!-- Exams Section -->
+<div class="section">
+    <h2>📝 جدول الفروض والاختبارات</h2>
+    <table>
+        <tr>
+            <th>المادة</th>
+            <th>نوع التقييم</th>
+            <th>التاريخ</th>
+            <th>الساعة</th>
+        </tr>
+
+        <tr class="exam">
+            <td>-</td>
+            <td>اختبار</td>
+            <td>----</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>-</td>
+            <td>اختبار</td>
+            <td>----</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>-</td>
+            <td>اختبار</td>
+            <td>----</td>
+            <td>-</td>
+        </tr>
+    </table>
+</div>
+
+
+<!-- Free Hours Section -->
+<div class="section">
+    <h2>🟢 الساعات التي لا ندرس فيها</h2>
+    <table>
+        <tr>
+            <th>اليوم</th>
+            <th>الساعة</th>
+        </tr>
+
+        <tr class="free">
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+        <tr class="free">
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+        <tr class="free">
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+</div>
+
+<footer>
+جميع الحقوق محفوظة © قسم علوم الحاسب
+</footer>
+
+<script>
+// تنبيه تلقائي إذا كان الاختبار خلال 7 أيام
+let today = new Date();
+let examDate = new Date("2026-03-10");
+
+let diffTime = examDate - today;
+let diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+if(diffDays <= 7 && diffDays >= 0){
+    document.getElementById("examAlert").style.display = "block";
+}
+</script>
+
+</body>
+</html>
