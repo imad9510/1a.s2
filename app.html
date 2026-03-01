@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول - قسم علوم الحاسب</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3a5f, #2c5364);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-container{
+    background:white;
+    padding:40px;
+    width:350px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+.login-container h2{
+    color:#1e3a5f;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:#1e3a5f;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#16304d;
+}
+
+.error{
+    color:red;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.success{
+    color:green;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+    <h2>🔐 تسجيل الدخول</h2>
+
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
+
+    <button onclick="login()">دخول</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+function login(){
+
+    // بيانات تجريبية
+    const correctUsername = "1as2";
+    const correctPassword = "12";
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let message = document.getElementById("message");
+
+    if(username === correctUsername && password === correctPassword){
+        message.innerHTML = "<p class='success'>تم تسجيل الدخول بنجاح ✅</p>";
+        
+        // تحويل بعد 1.5 ثانية
+        setTimeout(function(){
+            window.location.href = "index.html";
+        },1000);
+
+    }else{
+        message.innerHTML = "<p class='error'>اسم المستخدم أو كلمة المرور غير صحيحة ❌</p>";
+    }
+}
+</script>
+
+</body>
+</html>
