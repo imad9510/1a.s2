@@ -3,191 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>قسم 1 علوم 2</title>
+<title>تسجيل الدخول - قسم علوم الحاسب</title>
 
 <style>
-body {
-    margin: 0;
+body{
+    margin:0;
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+    background: linear-gradient(135deg, #1e3a5f, #2c5364);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* ===== Navbar ===== */
-nav {
-    background-color: #1e3a5f;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.login-container{
+    background:white;
+    padding:40px;
+    width:350px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    text-align:center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.login-container h2{
+    color:#1e3a5f;
+    margin-bottom:20px;
 }
 
-nav ul li {
-    cursor: pointer;
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
 }
 
-nav ul li:hover {
-    color: #ffd166;
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:#1e3a5f;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* ===== Hero Section ===== */
-.hero {
-    background: url('https://images.unsplash.com/photo-1581091870627-3d1d6c47d17b') center/cover;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 100px 20px;
+button:hover{
+    background:#16304d;
 }
 
-.hero h1 {
-    font-size: 40px;
+.error{
+    color:red;
+    margin-top:10px;
+    font-size:14px;
 }
 
-.hero button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background-color: #ffd166;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.hero button:hover {
-    background-color: #ffb703;
-}
-
-/* ===== Cards Section ===== */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 40px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: rgb(255, 255, 255);
-    padding: 25px;
-    width: 200px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ===== Announcements ===== */
-.announcements {
-    padding: 40px;
-    background: white;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.announcements h2 {
-    color: #1e3a5f;
-}
-
-/* ===== Contact ===== */
-.contact {
-    background-color: #1e3a5f;
-    color: white;
-    padding: 40px;
-    text-align: center;
-}
-
-input, textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
-}
-
-button.send {
-    background-color: #ffd166;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #16283d;
-    color: white;
+.success{
+    color:green;
+    margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav>
-    <h2>قسم 1 علوم 2</h2>
-    <ul><a href="index.html" style="text-decoration:none; color:inherit;">
-        <li>الرئيسية</li>
-      </a>
-        <a href="b.html" style="text-decoration:none; color:inherit;">
-        <li>الجدول الدراسي</li>
-      </a>
-      <a href="a.html" style="text-decoration:none; color:inherit;">
-        <li>التمرينات حول</li>
-      </a>
-      <a href="c.html" style="text-decoration:none; color:inherit;">
-        <li>اخر</li>
-      </a>
-    </ul>
-</nav>
+<div class="login-container">
+    <h2>🔐 تسجيل الدخول</h2>
 
-<!-- Hero Section -->
-<section class="hero">
-    <h1>أهلاً بكم في قسم 1 علوم 2</h1>
-    <p>نسعى لتعليم متميز</p>
-    <button onclick="showMessage()">المزيد</button>
-</section>
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
 
-<!-- Cards -->
-<section class="cards"><a href="a.html" style="text-decoration:none; color:inherit;">
-    <div class="card">📚 التمرينات حول</div>
-  </a>
-  <a href="b.html" style="text-decoration:none; color:inherit;">
-    <div class="card">📅 الجدول الدراسي</div>
-  </a> 
-  <a href="c.html" style="text-decoration:none; color:inherit;">
-    <div class="card">📢 اخر</div>
-</section>
-<!-- Contact -->
-<section class="contact">
-    <h2>تواصل معنا</h2>
-    <input type="text" placeholder="الاسم">
-    <input type="email" placeholder="البريد الإلكتروني">
-    <textarea rows="4" placeholder="الرسالة"></textarea>
-    <br>
-    <button class="send" onclick="sendForm()">إرسال</button>
-</section>
+    <button onclick="login()">دخول</button>
 
-<footer>
-جميع الحقوق محفوظة © التلميذ عماد الدين طويل
-</footer>
+    <div id="message"></div>
+</div>
 
 <script>
-function showMessage() {
-    alert("مرحباً بك في الموقع الرسمي لقسم 1 علوم 2 💻");
-}
+function login(){
 
-function sendForm() {
-    alert("تم إرسال رسالتك بنجاح ✅");
+    // بيانات تجريبية
+    const correctUsername = "1as2";
+    const correctPassword = "12";
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let message = document.getElementById("message");
+
+    if(username === correctUsername && password === correctPassword){
+        message.innerHTML = "<p class='success'>تم تسجيل الدخول بنجاح ✅</p>";
+        
+        // تحويل بعد 1.5 ثانية
+        setTimeout(function(){
+            window.location.href = "app.html";
+        },1000);
+
+    }else{
+        message.innerHTML = "<p class='error'>اسم المستخدم أو كلمة المرور غير صحيحة ❌</p>";
+    }
 }
 </script>
 
