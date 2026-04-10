@@ -13,6 +13,14 @@ body {
 }
 
 /* ===== Navbar ===== */
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: #ffd166;
+}
 nav {
     background-color: #1e3a5f;
     color: white;
@@ -99,7 +107,53 @@ nav ul li:hover {
 }
 
 /* ===== Contact ===== */
-.contact {
+/* ===== Contact ===== */
+.IMA {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.IMA form{
+    max-width: 500px;
+    margin: auto;
+}
+
+.IMA input,
+.IMA textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.IMA textarea{
+    resize: none;
+}
+
+.IMA input:focus,
+.IMA textarea:focus{
+    box-shadow: 0 0 0 2px #ffd166;
+}
+
+button.send {
+    background-color: #ffd166;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button.send:hover{
+    background-color: #ffb703;
+}
+.IMA {
     background-color: #1e3a5f;
     color: white;
     padding: 40px;
@@ -135,18 +189,11 @@ footer {
 <!-- Navbar -->
 <nav>
     <h2>قسم 1 علوم 2</h2>
-    <ul><a href="app.html" style="text-decoration:none; color:inherit;">
-        <li>الرئيسية</li>
-      </a>
-        <a href="b.html" style="text-decoration:none; color:inherit;">
-        <li>الجدول الدراسي</li>
-      </a>
-      <a href="a.html" style="text-decoration:none; color:inherit;">
-        <li>التمرينات حول</li>
-      </a>
-      <a href="c.html" style="text-decoration:none; color:inherit;">
-        <li>اخر</li>
-      </a>
+    <ul>
+        <li><a href="app.html">الرئيسية</a></li>
+        <li><a href="b.html">الجدول الدراسي</a></li>
+        <li><a href="a.html">التمرينات حول</a></li>
+        <li><a href="c.html">اخر</a></li>
     </ul>
 </nav>
 
@@ -156,41 +203,47 @@ footer {
     <p>نسعى لتعليم متميز</p>
     <button onclick="showMessage()">المزيد</button>
 </section>
-
 <!-- Cards -->
-<section class="cards"><a href="a.html" style="text-decoration:none; color:inherit;">
+<section class="cards">
+  <a href="a.html" style="text-decoration:none; color:inherit;">
     <div class="card">📚 التمرينات حول</div>
   </a>
-   <a href="i.html" style="text-decoration:none; color:inherit;">
+
+  <a href="i.html" style="text-decoration:none; color:inherit;">
     <div class="card">✍️ ملخصات</div>
   </a>
+
   <a href="b.html" style="text-decoration:none; color:inherit;">
     <div class="card">📅 الجدول الدراسي</div>
-  </a> 
+  </a>
+
   <a href="c.html" style="text-decoration:none; color:inherit;">
     <div class="card">📢 اخر</div>
+  </a>
 </section>
 <!-- Contact -->
-<section class="contact">
+<section class="IMA">
     <h2>تواصل معنا</h2>
-    <input type="text" placeholder="الاسم">
-    <input type="email" placeholder="البريد الإلكتروني">
-    <textarea rows="4" placeholder="الرسالة"></textarea>
-    <br>
-    <button class="send" onclick="sendForm()">إرسال</button>
-</section>
+<form action="https://formsubmit.co/touilimad580@gmail.com" method="POST">
 
+    <input type="text" name="name" placeholder="الاسم" required>
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+    <textarea name="message" rows="4" placeholder="الرسالة" required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- مهم جداً -->
+    <input type="hidden" name="_next" value="https://imad9510.github.io/1a.s2/app.html">
+
+    <button class="send" type="submit">إرسال</button>
+</form>
+</section>
 <footer>
 جميع الحقوق محفوظة © التلميذ عماد الدين طويل
 </footer>
-
 <script>
 function showMessage() {
     alert("مرحباً بك في الموقع الرسمي لقسم 1 علوم 2 💻");
-}
-
-function sendForm() {
-    alert("تم إرسال رسالتك بنجاح ✅");
 }
 </script>
 
